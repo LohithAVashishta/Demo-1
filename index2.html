@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>ISRO Form</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="../css/bootstrap.css" >
+</head>
+  <script src="../js/jquery.js"></script>
+
+  <script src="../js/popper.js"></script>
+  <script src="../js/bootstrapbundle.js"></script>
+  
+
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/ubuntufont.css">
+</head>
+
+<body>
+
+<header> ABC </header>
+<br>
+<nav class="navbar" style="background-color: #e3f2fd;">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">
+      <img src="" alt="" height="40" class="d-inline-block align-text-top"><h2>
+      Communication Link status</h2>
+    </a>
+  </div>
+</nav>
+</br>
+<form>
+
+
+  
+  <ul class="list-group">
+    <li class="list-group-item" style="background-color: #e2e2e2;">
+      <div class="sectionA">
+      <h3> <b>Section A: </b> <button type="button" class="btn btn-light">+</button> </h3> </li>
+
+      
+    <li class="list-group-item"><div class="row">
+      <div class="col">
+        <div><form>
+          <fieldset class="A1 col "  >
+            <legend class="col-form-label col-sm-2 pt-0">INC1Terracomlink: </legend>
+            <div class="col-sm-10">
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1" value="option1">
+                <label class="form-check-label" for="gridRadios1">
+                  OK
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2" value="option2">
+                <label class="form-check-label" for="gridRadios2" onclick="dropdownfn();">
+                 Not OK
+                </label>
+              </div>
+            </div>
+          </fieldset></form>
+        </div>
+      </div>
+      <div class="col d-flex" style="">
+        <div class="vr"></div>
+      </div>
+      
+      <div class="col">
+        <div><form>
+          <fieldset class="A2 col " >
+            <legend class="col-form-label -sm-2 pt-0">INC2SatCom Link: </legend>
+            <div class="col-sm-10">
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1" value="option1">
+                <label class="form-check-label" for="gridRadios1">
+                  OK
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2" value="option2">
+                <label class="form-check-label" for="gridRadios2" onclick="dropdownfn();">
+                 Not OK
+                </label>
+              </div>
+            </div>
+          </fieldset></form></div>
+      </div>
+      <div class="col d-flex" style="">
+        <div class="vr"></div>
+      </div>
+      <div class="col">
+        <div><form>
+          <fieldset class="A3 col" >
+            <legend class="col-form-label -sm-2 pt-0">INC1-INC2 Link: </legend>
+            <div class="col-sm-10">
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1" value="option1" >
+                <label class="form-check-label" for="gridRadios1">
+                  OK
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2" value="option2">
+                <label class="form-check-label" for="gridRadios2">
+                 Not OK
+                </label>
+              </div>
+            </div>
+          </fieldset></form>
+      </div>
+      </div>
+      <div class="col d-flex" style="">
+        <div class="vr"></div>
+      </div>
+      <div class="col">
+        <div class="A4" >
+          <label for="exampleFormControlTextarea" >Issues in last 6 hours: </label>
+        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+    
+        </div>
+      </div>
+    </div>
+  </div></li>
+
+  <!-- Dropdown location List for NOT OK  -->
+
+
+
+<div id="dropdown" class="hide">
+  <div class=" dropdown container text-center">
+    <div class="row align-items-start">
+      <div class="col">
+        <div>
+          <div class="input-group mb-1">
+            <label class="input-group-text" required for="inputGroupSelect01">Location</label>
+            <select class="form-select"lass="dropdown"  id="inputGroupSelect01">
+              <option selected>Choose...</option>
+              <option value="1">Bengaluru</option>
+              <option value="2">Delhi</option>
+              <option value="3">Lucknow</option>
+            </select>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div>
+          <div class="input-group mb-1">
+            <label class="input-group-text" required for="inputGroupSelect01">Status</label>
+            <select class="form-select" id="inputGroupSelect01">
+              <option selected>Choose...</option>
+              <option value="1">Intermittend</option>
+              <option value="2">Down</option>
+  
+            </select>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+      
+  <li class="list-group-item" style="background-color: #e2e2e2;">
+    <div class="sectionB">
+    <h3> <b>Section B: </b> <button type="button" class="btn btn-light">+</button> </h3> </li>
+
+    <li><div>
+<!-- Checkoxes of section B -->
+<div class="col">
+<div class="form-check col 3">
+  <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+  <label class="form-check-label" for="defaultCheck1">
+    document1.txt
+  </label>
+</div>
+<div class="form-check col">
+  <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+  <label class="form-check-label" for="defaultCheck1">
+    document2.txt
+  </label>
+</div>
+<div class="form-check col">
+  <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+  <label class="form-check-label" for="defaultCheck1">
+    document3.txt
+  </label>
+</div>
+<div class="form-check col">
+  <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+  <label class="form-check-label" for="defaultCheck1">
+    document4.txt
+  </label>
+</div>
+</div>
+
+
+    </div>
+    </li>
+
+  </ul>
+
+
+  
+
+    
+
+
+  
+  
+      
+
+
+
+
+
+
+
+
+ 
+<!-- <div>
+  <div>
+    <label for="exampleDataList" class="form-label">Location</label>
+    <input class="form-control" list="datalistOptions" id="exampleDataList" placeholder="Type to search...">
+    <datalist id="datalistOptions">
+      <option value="Bengaluru">
+      <option value="New Delhi">
+      <option value="Lucknow">
+      <option value="Chennai">
+      <option value="Hyderabad">
+    </datalist>
+  </div>
+  <div>
+    <label for="exampleDataList" class="form-label">Status</label>
+    <input class="form-control" list="datalistOptions2" id="exampleDataList" placeholder="Type to search...">
+    <datalist id="datalistOptions2">
+      <option value="Intermittend">
+      <option value="Down">
+    </datalist>
+  </div>
+</div>  -->
+
+
+
+</div><br>
+<button type="submit" class="btn btn-primary" >Submit</button>
+<br><br>
+</form>
+
+
+<div class="footer">
+  <footer class="py-1 my-1">
+    <ul class="nav justify-content-center border-bottom pb-3 mb-3">
+      <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Home</a></li>
+      <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Features</a></li>
+      <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Pricing</a></li>
+      <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">FAQs</a></li>
+      <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">About</a></li>
+    </ul>
+    <p class="text-center text-muted">© 2022 Company, Inc</p>
+  </footer>
+</div>
+
+
+<div class="form-section form-section--locstat" style="overflow:hidden">
+  <div class="form-section__header">
+    <div class="form-section__header-text">Please select Location and Status</div>
+  </div>
+  <div class="form-section__fieldset">
+    <div>
+      <div class="form-section__rows">
+        <div class="form__row">
+          <div class="form__card form__card--empty form__card--hidden">
+            <div class="form__card-data">
+              <div class="form__card-name">
+                <b> Location</b>
+              </div>
+              <div class="form__card-date"></div>
+            </div>
+            <div class="form__card-tools">
+              <div class="form__card-disabled"></div>
+              <div class="form__card-tool">
+                <div class="form__card-delete">
+                  <button class="delete" onclick="deletelocandstat()">x</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script> 
+
+function deletelocandstat() {
+  return e.handleDeleteSectionItem(n, r)
+ }</script>
+
+<script src="../js/scripts.js"></script>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+<div class="container-Section-A p-0">
+  <form>
+    <ul class="list-style-none text-center d-flex flex-wrap" style="margin:auto; justify-content: center;">
+      <li>
+
+        <ul class="list-style-none text-center d-flex flex-wrap">
+
+          <li class="inc1-terracom-link p-3 col-12 ">
+
+            <span>
+              <legend class="OKradio"> Terrestial Link</legend>
+            </span>
+            <span><input type="radio" id="secAOkRadio1" name="Radio1" value="OK"
+                onchange="showHideDivRadio('Radio1', 'dropdownNotOkterracom')">
+              <label for="OK">OK</label>
+              <input type="radio" id="secANotOkRadio1" name="Radio1" value="NotOK"
+                onchange="showHideDivRadio('Radio1', 'dropdownNotOkterracom')">
+              <label for="NotOK">NOT OK</label></span>
+
+            <!-- <li style="border-left:1px solid #000; padding: fit-content; height:auto"></li> -->
+
+          </li>
+
+
+
+
+
+
+          <li>
+            <div class="hide" id="dropdownNotOkterracom">
+              <div class="box-dropdown" id="dropdown_container">
+
+                <div class="box-header">
+                  <h1 class="box-title">Please select the location and status of Terrestrial Link</h1>
+                </div>
+                <ul class="list-style-none">
+                  <li class="box-row p-0 d-flex flex-wrap">
+                    <div class="col-12 col-md-6 px-3 py-4">
+                      <div class="mt-2">
+                        <div class="form-element col-2" name="position-locationstatus.items[0].location">
+                          <label class="loclabel"> Location </label>
+                          <select id="location1" required>
+                            <option value="" disabled selected> Select the Location</option>
+                            <option value="Bengaluru"> Bengaluru</option>
+                            <option value="Delhi"> Delhi</option>
+                            <option value="Lucknow"> Lucknow</option>
+                            <option value="Chennai"> Chennai</option>
+                            <option value="Hassan"> Hassan</option>
+
+                          </select>
+                        </div>
+                      </div>
+
+                    </div>
+                    <div class="col-12 col-md-6 px-3 py-4">
+                      <div class="mt-2">
+                        <div class="form-element col-2" name="position-locationstatus.items[0].status">
+                          <label class="loclabel"> Status </label>
+                          <select id="stat1" required>
+                            <option value="" disabled selected> Select the status</option>
+                            <option value="Intermittent"> Intermittent</option>
+                            <option value="Down"> Down</option>
+
+
+                          </select>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-12 col-md-6 px-3 py-4">
+                      <div class="mt-2">
+                        <button id="add_dropdown"
+                          onclick="displaySelectedValue('location1', 'stat1', 'selected-values')">Add</button>
+                      </div>
+                    </div>
+
+
+                  </li>
+                  <li class="list-style-none">
+                    <div>
+                      <div id="selected-values"></div>
+                    </div>
+
+                  </li>
+
+                </ul>
+
+
+
+              </div>
+            </div>
+
+          </li>
+        </ul>
+      </li>
+
+
+
+
+      <!-- Need to add everythimng in another list -->
+
+      <!-- Put entire satellite link in one li and under that li create ul, under that add radios in li and hidden div in separate li -->
+
+      <li>
+
+        <ul class="list-style-none text-center d-flex flex-wrap">
+
+
+
+
+          <li class="inc2-satcom-link p-3 col-12  col-md-3 d-flex">
+
+            <span>
+              <legend class="OKradio"> Satellite Link</legend>
+            </span>
+            <span><input type="radio" id="secAOkRadio2" name="Radio2" value="OK"
+                onchange="showHideDivRadio('Radio2', 'dropdownNotOkSatcom')">
+              <label for="OK">OK</label>
+              <input type="radio" id="secANotOkRadio2" name="Radio2" value="NotOK"
+                onchange="showHideDivRadio('Radio2', 'dropdownNotOkSatcom')">
+              <label for="NotOK">NOT OK</label></span>
+
+          </li>
+
+
+
+
+
+          <li class="inc1-terracom-link p-3 col-12 d-flex">
+            <div class="hide" id="dropdownNotOkSatcom">
+              <div class="box-dropdown" id="dropdown_container">
+
+                <div class="box-header">
+                  <h1 class="box-title">Please select the location and status of INC2SatCom Link</h1>
+                </div>
+
+                <ul>
+                  <li class="box-row p-0 d-flex flex-wrap">
+                    <div class="col-12 col-md-6 px-3 py-4">
+                      <div class="mt-2">
+                        <div class="form-element col-2" name="position-locationstatus.items[0].location">
+                          <label class="loclabel"> Location </label>
+                          <select id="location2" required>
+                            <option value="" disabled selected> Select the Location</option>
+                            <option value="Bengaluru"> Bengaluru</option>
+                            <option value="Delhi"> Delhi</option>
+                            <option value="Lucknow"> Lucknow</option>
+                            <option value="Chennai"> Chennai</option>
+                            <option value="Hassan"> Hassan</option>
+
+                          </select>
+                        </div>
+                      </div>
+
+                    </div>
+                    <div class="col-12 col-md-6 px-3 py-4">
+                      <div class="mt-2">
+                        <div class="form-element col-2" name="position-locationstatus.items[0].status">
+                          <label class="loclabel"> Status </label>
+                          <select id="stat2" required>
+                            <option value="" disabled selected> Select the status</option>
+                            <option value="Intermittent"> Intermittent</option>
+                            <option value="Down"> Down</option>
+
+
+                          </select>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-12 col-md-6 px-3 py-4">
+                      <div class="mt-2">
+                        <button id="add_dropdown"
+                          onclick="displaySelectedValue('location2', 'stat2', 'selected-values2')">Add</button>
+                      </div>
+                    </div>
+
+
+                  </li>
+                  <li class="list-style-none">
+                    <div>
+                      <div id="selected-values2"></div>
+                    </div>
+
+                  </li>
+
+                </ul>
+
+
+              </div>
+            </div>
+          </li>
+
+
+        </ul>
+      </li>
+
+
+
+
+
+
+
+
+
+      <!-- <li style="border-left:1px solid #000; padding: 10px 0px; height: auto "></li> -->
+      <li class="inc1-inc2-link p-3 col-12 col-sm-6 col-md-3 ">
+
+        <span>
+          <legend class="OKradio"> INC1-INC2 Link</legend>
+        </span>
+        <span><input type="radio" id="secAOKRadio3" name="Radio3" value="OK">
+          <label for="OK">OK</label>
+          <input type="radio" id="secANotOkRadio3" name="Radio3" value="NotOK">
+          <label for="NotOK">NOT OK</label></span>
+
+      </li>
+
+
+      <!-- <li style="border-left:1px solid #000; padding: 10px 0px; height:auto "></li> -->
+      <!-- <li class="issues-6-hrs p-3 col-12 col-sm-6 col-md-3">
+
+      <span><label for="exampleFormControlTextarea">Issues in last 6 hours: </label></span>
+      <span>
+        <textarea class="form-control" id="IssuesTextArea" rows="4"></textarea></span>
+        <div id="popupMessage" style="display:inline-block"></div>
+    </li> -->
+
+</div>
+</ul>
+</form>
+
+
+
+
+</div>

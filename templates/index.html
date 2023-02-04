@@ -1,0 +1,1118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/ubuntufont.css">
+
+  <!-- CSS only -->
+<!--   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous"> -->
+  <!-- JavaScript Bundle with Popper -->
+<!--   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+    crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css"> -->
+
+
+</head>
+
+<body>
+
+
+
+
+  <div class="container-fluid my-1">
+    <div class="row">
+      <div class="col-sm-4">
+        <img src="../Images/nationalemblem.png" width="175" height="175" class="img-fluid float-start"></img>
+      </div>
+      <div class="col-sm-4">
+        <div class="row" style="background-color:white;">
+          <h1 class="pt-5 text-center font-weight-bold">Isro Navigation Data Center</h1>
+        </div>
+        <div class="row" style="background-color:white;">
+          <h2 class="pt-4 text-center font-weight-bold">Indian Space Research Center</h2>
+        </div>
+      </div>
+      <div class="col-sm-4">
+
+
+
+
+
+        <img src="../Images/isro_logo.gif" width="175" height="175" class="img-fluid float-end"></img>
+      </div>
+    </div>
+
+  </div>
+  <div class="container-fluid  my-1">
+    <div class="topnav" id="topnav">
+      <a class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#sidebar" aria-controls="offcanvasScrolling">Sidebar</a>
+      <a href="/" class="link active"><i class="bi bi-grid-3x3-gap-fill"></i>Home</a>
+      <a href="/feedback" class="link"><i class="bi bi-archive-fill"></i>Feedback</a>
+      <a href="/logout" class="link"><i class="bi bi-power"></i>Logout</a>
+      <a href="/account" class="link"><i class="bi bi-person-fill"></i>Welcome Mr.X</a>
+      
+
+
+    </div>
+  </div>
+
+  
+
+  <div class="offcanvas offcanvas-start" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1" id="sidebar" aria-labelledby="offcanvasScrollingLabel">
+    <div class="offcanvas-header">
+      <h5 class="offcanvas-title" id="offcanvasScrollingLabel"></h5>
+      <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body">
+      <p></p>
+    </div>
+  </div>
+
+
+
+  <form>
+    <div class="section_name" style="margin:auto">
+      <h2 style="margin-left: 5vw"> Section A: <button type="button" class="plusbutton1" id="+button1"
+          onclick="plusbutton('+button1', 'secAdropdown')">
+          <h1>+</h1>
+        </button> </h2>
+    </div>
+    <br>
+    <div class="hide" id="secAdropdown">
+      <div class="box">
+
+        <div class="box-header">
+          <h2 class="box-title"> Communication Status </h2>
+        </div>
+
+        <div class="sectionA p-0">
+          <form>
+            <ul class="list-style-none text-center d-flex flex-wrap"
+              style="margin:auto; justify-content: center; padding: 5px;">
+              <li class="boxli p-3 col-12 col-sm-6 col-md-3" style="margin:auto;">
+                <div>
+                  <legend class="OKradio"> <b>Terrestrial Link</b></legend>
+                </div>
+                <div><input type="radio" id="secAOkRadio1" name="Radio1" value="OK"
+                    onchange="showHideDivRadio('Radio1', 'dropdownNotOkterracom', 'display-head1')">
+                  <label for="OK">OK</label>
+                  <input type="radio" id="secANotOkRadio1" name="Radio1" value="NotOK"
+                    onchange="showHideDivRadio('Radio1', 'dropdownNotOkterracom', 'display-head1')">
+                  <label for="NotOK">NOT OK</label>
+                </div>
+
+                <!-- change hide1 to hide -->
+                <div class="hide container-grid1" id="dropdownNotOkterracom">
+                  <div class="box-dropdown" id="dropdown_container">
+                    <div class="box-header">
+                      <h1 class="box-title">Please select the location and status of Terrestrial Link</h1>
+                    </div>
+                    <div style="display:grid; grid-template-columns:auto auto auto">
+
+                      <span class="location" style="width:80px">
+                        <label class="loclabel"> Location: </label>
+                        <select id="location1" required>
+                          <option value="" disabled selected>Location</option>
+                          <option value="Bengaluru"> Bengaluru</option>
+                          <option value="Delhi"> Delhi</option>
+                          <option value="Lucknow"> Lucknow</option>
+                          <option value="Chennai"> Chennai</option>
+                          <option value="Hassan"> Hassan</option>
+                        </select>
+                      </span>
+                      <span class="status" style="width:80px">
+                        <label class="statlabel"> Status: </label>
+                        <select id="stat1" required>
+                          <option value="" disabled selected>status</option>
+                          <option value="Intermittent"> Intermittent</option>
+                          <option value="Down"> Down</option>
+                        </select>
+                      </span>
+                      <span class="DOI" style="width:100px">
+                        <form action="/action_page.php">
+                          <label for="birthday">DOI:</label>
+                          <input type="date" id="doi" name="doi" style="width:115px;">
+                        </form>
+                      </span>
+                      <span class="confirm-btn" style="grid-column: 2/3; margin:10px">
+                        <button class="Terracom_confirm" id="terracom-confirm-btn"
+                          onclick="displaySelectedValue('location1', 'stat1', 'doi', 'display-field1')">Confirm</button>
+                      </span>
+                    </div>
+                  </div>
+
+                </div>
+              </li>
+
+              <li class="boxli p-3 col-12 col-sm-6 col-md-3" style="margin:auto;">
+                <div>
+                  <legend class="OKradio"> <b>Satellite link</b></legend>
+                </div>
+                <div><input type="radio" id="secAOkRadio2" name="Radio2" value="OK"
+                    onchange="showHideDivRadio('Radio2', 'dropdownNotOkSatcom', 'display-head2')">
+                  <label for="OK">OK</label>
+                  <input type="radio" id="secANotOkRadio2" name="Radio2" value="NotOK"
+                    onchange="showHideDivRadio('Radio2', 'dropdownNotOkSatcom', 'display-head2')">
+                  <label for="NotOK">NOT OK</label>
+                </div>
+
+                <!-- change hide1 to hide -->
+                <div class="hide container-grid" id="dropdownNotOkSatcom">
+                  <div class="box-dropdown" id="dropdown_container2">
+                    <div class="box-header">
+                      <h1 class="box-title">Please select the location and status of satellite Link</h1>
+                    </div>
+                    <div style="display:grid; grid-template-columns:auto auto auto">
+
+                      <span class="location" style="width:80px">
+                        <label class="loclabel"> Location: </label>
+                        <select id="location2" required>
+                          <option value="" disabled selected>Location</option>
+                          <option value="Bengaluru"> Bengaluru</option>
+                          <option value="Delhi"> Delhi</option>
+                          <option value="Lucknow"> Lucknow</option>
+                          <option value="Chennai"> Chennai</option>
+                          <option value="Hassan"> Hassan</option>
+                        </select>
+                      </span>
+                      <span class="status" style="width:80px">
+                        <label class="statlabel"> Status: </label>
+                        <select id="stat2" required>
+                          <option value="" disabled selected>status</option>
+                          <option value="Intermittent"> Intermittent</option>
+                          <option value="Down"> Down</option>
+                        </select>
+                      </span>
+                      <span class="DOI" style="width:100px;">
+                        <form action="/action_page.php">
+                          <label for="birthday">DOI:</label>
+                          <input type="date" id="doi2" name="doi" style="width:115px;">
+                        </form>
+                      </span>
+                      <span class="confirm-btn" style="grid-column: 2/3; margin:10px">
+                        <button class="Satcom_confirm" id="satcom-confirm-btn"
+                          onclick="displaySelectedValue('location2', 'stat2', 'doi2', 'display-field2')">Confirm</button>
+                      </span>
+                    </div>
+                  </div>
+
+                </div>
+              </li>
+
+              <li class="boxli p-3 col-12 col-sm-6 col-md-3" style="margin:auto;">
+                <div>
+                  <legend class="OKradio"><b> INC1-INC2 </b></legend>
+                </div>
+                <div><input type="radio" id="secAOkRadio3" name="Radio3" value="OK"
+                    onchange="showHideDivRadio('Radio3', 'dropdownNotOkInc1Inc2','display-head3')">
+                  <label for="OK">OK</label>
+                  <input type="radio" id="secANotOkRadio3" name="Radio3" value="NotOK"
+                    onchange="showHideDivRadio('Radio3', 'dropdownNotOkInc1Inc2', 'display-head3')">
+                  <label for="NotOK">NOT OK</label>
+                </div>
+
+                <!-- change hide1 to hide -->
+                <div class="hide container-grid" id="dropdownNotOkInc1Inc2">
+                  <div class="box-dropdown" id="dropdown_container2">
+                    <div class="box-header">
+                      <h1 class="box-title">Please select the location and status of INC1-INC2</h1>
+                    </div>
+                    <div style="display:grid; grid-template-columns:auto auto auto">
+
+                      <span class="location" style="width:80px">
+                        <label class="loclabel"> Location: </label>
+                        <select id="location3" required>
+                          <option value="" disabled selected>Location</option>
+                          <option value="Bengaluru"> Bengaluru</option>
+                          <option value="Delhi"> Delhi</option>
+                          <option value="Lucknow"> Lucknow</option>
+                          <option value="Chennai"> Chennai</option>
+                          <option value="Hassan"> Hassan</option>
+                        </select>
+                      </span>
+                      <span class="status" style="width:80px">
+                        <label class="statlabel"> Status: </label>
+                        <select id="stat3" required>
+                          <option value="" disabled selected>status</option>
+                          <option value="Intermittent"> Intermittent</option>
+                          <option value="Down"> Down</option>
+                        </select>
+                      </span>
+                      <span class="DOI" style="width:100px;">
+                        <form action="/action_page.php">
+                          <label for="birthday">DOI:</label>
+                          <input type="date" id="doi3" name="doi" style="width:115px;">
+                        </form>
+                      </span>
+                      <span class="confirm-btn" style="grid-column: 2/3; margin:10px">
+                        <button class="inc1inc2_confirm" id="inc1inc2-confirm-btn"
+                          onclick="displaySelectedValue('location3', 'stat3', 'doi3', 'display-field3')">Confirm</button>
+                      </span>
+                    </div>
+                  </div>
+
+                </div>
+              </li>
+
+              <!-- Change hide1 as hide when done -->
+              <li class="boxli mar-rt-5 hide1 p-3 col-12 col-sm-6 col-md-3" id="hidden-issues" style="margin: auto;">
+                <b>Issues:</b><br>
+                <div class="hide" id="display-head1">
+                  <h4>Issues in Terrestrial link</h4>
+                  <div id="display-field1"></div>
+                </div>
+                <div class="hide" id="display-head2">
+                  <h4>Issues in Satellite link</h4>
+                  <div id="display-field2"></div>
+                </div>
+                <div class="hide" id="display-head3">
+                  <h4>Issues in INC1-INC2</h4>
+                  <div id="display-field3"></div>
+                </div>
+
+
+              </li>
+
+
+            </ul>
+          </form>
+
+        </div>
+
+
+      </div>
+    </div>
+    <br>
+
+
+    <div class="section_name">
+      <h2 style="margin-left: 5vw"> Section B: <button type="button" class="plusbutton1" id="+button2"
+          onclick="plusbutton('+button2', 'secBdropdown'), dynamicTable('section-B4-BLRstreamA'),  dynamicTable('section-B4-BLRstreamB'), dynamicTable('section-B4-LCKstreamA'), dynamicTable('section-B4-LCKstreamB'), dynamicTableUserPosition('table-user-position'), addCheckbox(), displayFill();">
+          <h1>+</h1>
+        </button> </h2>
+    </div>
+    <br>
+    <!-- make hide1 as hide after completing the section -->
+    <div class="hide" id="secBdropdown">
+      <div class="box">
+
+        <!-- Section B1 -->
+        <div class="box-header">
+          <h2 class="box-title"> B1:</h2>
+        </div>
+
+        <div class="container-Section-B box-row">
+
+          <form id="checkbox-form">
+            <div id="test-container-test" style="padding: 5px">
+
+            </div>
+          </form>
+
+        </div>
+
+
+        <!-- make hide1 as hide after completing the section -->
+        <div class="hide" id="textforcheckbox">
+          <div class="form-group">
+            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" cols="50"
+              placeholder="Please mention the issue"></textarea>
+          </div>
+        </div>
+
+        <!-- Section B2 -->
+
+        <div>
+          <div class="box-header">
+            <h2 class="box-title"> B2: Storage</h2>
+          </div>
+          <div class="container-Section-B box-row p-0">
+
+            <form id="section-B2" style="padding:5px">
+              <ul class="list-style-none d-flex flex-wrap" style="margin:auto; justify-content: center;">
+
+                <li class="p-3 col-12 col-sm-6 col-md-3 boxli mar-rt-5">
+                  <div>
+                    <div>
+                      <legend class="OKradio"><b>172.19.2.145 (ShiftOPs):</b></legend>
+                    </div>
+                    <div><input type="radio" id="storage1" name="storage-radio-1" value="OK">
+                      <label for="OK">OK</label>
+                      <input type="radio" id="storage1" name="storage-radio-1" value="NotOK">
+                      <label for="NotOK">NOT OK</label>
+                    </div>
+                    <br>
+                  </div>
+                </li>
+
+                <li class="p-3 col-12 col-sm-6 col-md-3 boxli mar-rt-5">
+                  <div>
+                    <div>
+                      <legend class="OKradio"><b>172.19.4.15 (NSOP1):</b></legend>
+                    </div>
+                    <div><input type="radio" id="storage2" name="storage-radio-2" value="OK">
+                      <label for="OK">OK</label>
+                      <input type="radio" id="storage2" name="storage-radio-2" value="NotOK">
+                      <label for="NotOK">NOT OK</label>
+                    </div>
+                    <br>
+                  </div>
+                </li>
+
+                <li class="p-3 col-12 col-sm-6 col-md-3 boxli mar-rt-5">
+                  <div>
+                    <div>
+                      <legend class="OKradio"><b>172.19.7.15 (NSOP2):</b></legend>
+                    </div>
+                    <div><input type="radio" id="storage3" name="storage-radio-3" value="OK">
+                      <label for="OK">OK</label>
+                      <input type="radio" id="storage3" name="storage-radio-3" value="NotOK">
+                      <label for="NotOK">NOT OK</label>
+                    </div>
+                    <br>
+                  </div>
+                </li>
+              </ul>
+            </form>
+          </div>
+        </div>
+
+
+        <!-- Section B3 -->
+        <div>
+          <div class="box-header">
+            <h2 class="box-title"> B3: Archival</h2>
+          </div>
+          <div class="container-Section-B box-row p-0">
+            <form id="section-B3">
+              <div id="archival-container">
+
+
+
+
+              </div>
+            </form>
+          </div>
+        </div>
+
+        <!-- Section B4  Stream A BLR-->
+        <div>
+          <div class="box-header">
+            <h2 class="box-title"> B4: UERE Stream A(BLR) </h2>
+          </div>
+          <div class="container-Section-B box-row p-0">
+            <ul class="list-style-none text-center d-flex flex-wrap"
+              style="margin:auto; justify-content: center; padding: 8px;">
+              <li>
+                <table id="section-B4-BLRstreamA">
+
+                </table>
+              </li>
+
+            </ul>
+
+          </div>
+        </div>
+
+
+        <!-- Section B4 Stream B BLR -->
+        <div>
+          <div class="box-header">
+            <h2 class="box-title"> B4: UERE Stream B(BLR) </h2>
+          </div>
+          <div class="container-Section-B box-row p-0">
+            <ul class="list-style-none text-center d-flex flex-wrap"
+              style="margin:auto; justify-content: center; padding: 8px;">
+              <li>
+                <table id="section-B4-BLRstreamB">
+
+                </table>
+              </li>
+
+            </ul>
+
+          </div>
+        </div>
+
+        <!-- Section B4 Stream A LCK -->
+        <div>
+          <div class="box-header">
+            <h2 class="box-title"> B4: UERE Stream A(LCK) </h2>
+          </div>
+          <div class="container-Section-B box-row p-0">
+            <ul class="list-style-none text-center d-flex flex-wrap"
+              style="margin:auto; justify-content: center; padding: 8px;">
+              <li>
+                <table id="section-B4-LCKstreamA">
+
+                </table>
+              </li>
+
+            </ul>
+
+          </div>
+        </div>
+
+
+        <!-- Section B4 Stream B LCK -->
+        <div>
+          <div class="box-header">
+            <h2 class="box-title"> B4: UERE Stream B(LCK) </h2>
+          </div>
+          <div class="container-Section-B box-row p-0">
+            <ul class="list-style-none text-center d-flex flex-wrap"
+              style="margin:auto; justify-content: center; padding: 8px;">
+              <li>
+                <table id="section-B4-LCKstreamB">
+
+                </table>
+              </li>
+
+            </ul>
+
+          </div>
+        </div>
+
+        <!-- Section user position B5, B6, B7, B8 -->
+        <div>
+          <div class="box-header">
+            <h2 class="box-title"> User Position</h2>
+          </div>
+          <div class="container-Section-B box-row p-0">
+            <ul class="list-style-none text-center d-flex flex-wrap"
+              style="margin:auto; justify-content: center; padding: 8px;">
+              <li>
+                <table id="table-user-position">
+
+                </table>
+              </li>
+
+
+            </ul>
+          </div>
+        </div>
+
+        <!-- Section B9 -->
+        <div>
+          <div class="box-header">
+            <h2 class="box-title"> B9: </h2>
+          </div>
+          <div class="container-Section-B box-row p-0">
+            <ul class="list-style-none text-center d-flex flex-wrap" style="margin:auto; justify-content: center;">
+              <li class="p-3 col-12 col-sm-6 col-md-3"><b>
+                  Issues in last 6 hours:</b>
+                <textarea class="form-control" id="issuesTextAreaB9" rows="4"
+                  onclick="validation('issuesTextAreaB9', 'popupMessage2')"></textarea>
+                <span id="popupMessage2"></span>
+              </li>
+
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- Section C start -->
+
+    <br>
+    <div class="section_name" style="margin:auto">
+      <h2 style="margin-left: 5vw"> Section C: <button type="button" class="plusbutton1" id="+button3"
+          onclick="plusbutton('+button3', 'secCdropdown')">
+          <h1>+</h1>
+        </button> </h2>
+    </div>
+    <br>
+
+    <!-- make hide1 as hide -->
+    <div class="hide" id="secCdropdown">
+      <div class="box">
+        <div class="box-header">
+          <h2 class="box-title"> C1: Parallel Chain</h2>
+        </div>
+
+        <div class="container-Section-A box-row p-0">
+          <form>
+            <ul class="list-style-none text-center d-flex flex-wrap marjus" style="padding:8px">
+              <li class="boxli mar-rt-5 col-md-3" style="padding: 8px;">
+
+                <div>
+
+                  <legend class="parallel-chain"> <b>INC1-SERVER1</b> </legend>
+                  <input type="radio" id="inc1ser1" name="inc1ser1" value="Ok"
+                    onchange="showHideDivRadio('inc1ser1', 'textforparallelchain1')">
+                  <label for="Ok">OK</label>
+                  <input type="radio" id="inc1ser1" name="inc1ser1" value="NotOK"
+                    onchange="showHideDivRadio('inc1ser1', 'textforparallelchain1')">
+                  <label for="NotOK">Not OK</label>
+
+                </div>
+
+                <div class="hide" id="textforparallelchain1">
+                  <div class="form-group">
+                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="5"
+                      placeholder="Please mention the issue"></textarea>
+                  </div>
+                  <span id="popupMessageinc1ser1"></span>
+                </div>
+
+              </li>
+              <br>
+              <li class="boxli mar-rt-5  col-md-3" style="padding: 8px;">
+
+                <div>
+
+                  <legend class="parallel-chain"> <b>INC1-SERVER2</b></legend>
+                  <input type="radio" id="inc1ser2" name="inc1ser2" value="OK"
+                    onchange="showHideDivRadio('inc1ser2', 'textforparallelchain2')">
+                  <label for="OK">OK</label>
+                  <input type="radio" id="inc1ser2" name="inc1ser2" value="NotOK"
+                    onchange="showHideDivRadio('inc1ser2', 'textforparallelchain2')">
+                  <label for="Not OK">Not OK</label>
+
+                </div>
+
+                <div class="hide" id="textforparallelchain2">
+                  <div class="form-group">
+                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="5"
+                      placeholder="Please mention the issue"></textarea>
+                  </div>
+                  <span id="popupMessageinc1ser2"></span>
+                </div>
+              </li>
+              <br>
+              <li class="boxli mar-rt-5 col-md-3" style="padding: 8px;">
+
+                <div>
+
+                  <legend class="parallel-chain "> <b>INC2-SERVER1</b></legend>
+                  <input type="radio" id="inc2ser1" name="inc2ser1" value="OK"
+                    onchange="showHideDivRadio('inc2ser1', 'textforparallelchain3')">
+                  <label for="OK">OK</label>
+                  <input type="radio" id="inc2ser1" name="inc2ser1" value="NotOK"
+                    onchange="showHideDivRadio('inc2ser1', 'textforparallelchain3')">
+                  <label for="Not OK">Not OK</label>
+
+                </div>
+
+                <div class="hide" id="textforparallelchain3">
+                  <div class="form-group">
+                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="5"
+                      placeholder="Please mention the issue"></textarea>
+                  </div>
+                  <span id="popupmessageinc2ser1"></span>
+                </div>
+              </li>
+              <br>
+              <li class="boxli mar-rt-5 col-md-3" style="padding: 8px;">
+
+                <div>
+
+                  <legend class="parallel-chain"> <b>INC2-SERVER2</b></legend>
+                  <input type="radio" id="inc2ser2" name="inc2ser2" value="OK"
+                    onchange="showHideDivRadio('inc2ser2', 'textforparallelchain4')">
+                  <label for="OK">OK</label>
+                  <input type="radio" id="inc2ser2" name="inc2ser2" value="NotOK"
+                    onchange="showHideDivRadio('inc2ser2', 'textforparallelchain4')">
+                  <label for="Not OK">Not OK</label>
+
+                </div>
+
+                <div class="hide" id="textforparallelchain4">
+                  <div class="form-group">
+                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="5"
+                      placeholder="Please mention the issue"></textarea>
+                  </div>
+                  <span id="popupMessageinc2ser2"></span>
+                </div>
+              </li>
+              <br>
+            </ul>
+          </form>
+        </div>
+
+        <!-- section C2 -->
+        <div>
+          <div class="box-header">
+            <h2 class="box-title"> C2:</h2>
+          </div>
+          <div class="container-Section-B box-row p-0">
+            <ul class="list-style-none text-center marjus p-8">
+              <li class="p-3 col-12 col-sm-6 col-md-3 boxli marjus">
+                <legend class="irnwtchainA"><b> IRNWT chain A: </b></legend>
+                <input type="radio" id="irnwtA" name="irnwtA" value="OK"
+                  onchange="showHideDivRadio('irnwtA', 'textforirnwtchainA')">
+                <label for="OK">OK</label>
+                <input type="radio" id="irnwtA" name="irnwtA" value="NotOK"
+                  onchange="showHideDivRadio('irnwtA', 'textforirnwtchainA')">
+                <label for="Not OK">Not OK</label>
+
+
+                <div class="hide" id="textforirnwtchainA">
+
+                  <div class="form-group">
+                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="5"
+                      placeholder="Please mention the issue"></textarea>
+                  </div>
+                  <span id="popupMessageirnwtchainA"></span>
+
+                </div>
+              </li>
+
+            </ul>
+          </div>
+        </div>
+
+        <!-- section C3 -->
+        <div>
+          <div class="box-header">
+            <h2 class="box-title"> C3:</h2>
+          </div>
+          <div class="container-Section-C box-row p-0">
+            <ul class="list-style-none text-center marjus p-8">
+              <li class="p-3 col-12 col-sm-6 col-md-3 boxli marjus">
+                <legend class="irnwtchainA"> <b>IRNWT chain B: </b></legend>
+                <input type="radio" id="irnwtB" name="irnwtB" value="OK"
+                  onchange="showHideDivRadio('irnwtB', 'textforirnwtchainB')">
+                <label for="OK">OK</label>
+                <input type="radio" id="irnwtB" name="irnwtB" value="NotOK"
+                  onchange="showHideDivRadio('irnwtB', 'textforirnwtchainB')">
+                <label for="Not OK">Not OK</label>
+
+                <div class="hide" id="textforirnwtchainB">
+
+                  <div class="form-group">
+                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="5"
+                      placeholder="Please mention the issue"></textarea>
+                  </div>
+                  <span id="popupMessageirnwtchainB"></span>
+
+                </div>
+              </li>
+
+            </ul>
+          </div>
+        </div>
+
+
+        <!-- Section C4 -->
+        <div>
+          <div class="box-header">
+            <h2 class="box-title"> C4: TWSTFT Health of all Chains</h2>
+          </div>
+          <div class="section-C4 box-row p-0" id="C4-health">
+
+          </div>
+        </div>
+
+
+        <!-- Section C5 -->
+        <div>
+          <div class="box-header">
+            <h2 class="box-title"> C5: GNSS Offsets </h2>
+          </div>
+          <div class="section-C5 box-row p-0" id="C5-GNSS">
+
+          </div>
+        </div>
+
+        <div class="p-3 col-12 col-sm-6 col-md-3 boxli marjus" style="margin-bottom: 8px;">
+          <b>Issues in last 6 hours:</b>
+          <textarea class="form-control" id="issuesTextAreaC5" rows="4"
+            onclick="validation('issuesTextAreaC5', 'popupMessage3')"></textarea>
+          <span id="popupMessage3"></span>
+        </div>
+
+      </div>
+    </div> <!-- Section C end div-->
+
+
+
+
+    <!-- Section D -->
+    <br>
+    <div class="section_name" style="margin:auto">
+      <h2 style="margin-left: 5vw"> Section D: <button type="button" class="plusbutton1" id="+button4"
+          onclick="plusbutton('+button4', 'secDdropdown'), dyanmicSchemacs('secD1-SchemacsHealth')">
+          <h1>+</h1>
+        </button> </h2>
+    </div>
+    <br>
+
+    <!-- Section D1 -->
+    <div class="hide" id="secDdropdown">
+      <div class="box">
+        <div class="box-header">
+          <h2 class="box-title"> D1: Schemacs Health</h2>
+        </div>
+        <div class="secD1-SchemacsHealth" id="secD1-SchemacsHealth">
+          <!-- <ul class="list-style-none marjus d-flex flex-wrap">
+            <li class="p-3 col-12 col-sm-6 col-md-2 boxli">
+              <b>
+                <legend>Monit Status</legend>
+              </b>
+              <input type="radio" id="monit-status" name="monit-status" value="OK"
+                onchange="showHideDivRadio('monit-status', 'monit-status-hidden-div')">
+              <label for="OK">OK</label>
+              <input type="radio" id="monit-status" name="monit-status" value="NotOK"
+                onchange="showHideDivRadio('monit-status', 'monit-status-hidden-div')">
+              <label for="Not OK">Not OK</label>
+ -->
+             <!--  <div class="hide" id="Monit_Status-hidden-div">
+
+                <div>
+                  <textarea id="exampleFormControlTextarea2" rows="4" style="width: 200px" placeholder="Please mention the issue"></textarea>
+                </div>
+                <span id="popupMessageMonitStatus"></span>
+
+              </div> -->
+
+
+
+            <!-- </li>
+            <li class="inc1-cs5 p-3 col-12 col-sm-6 col-md-2 boxli">INC1-CS5</li>
+            <li class="inc1-cs6 p-3 col-12 col-sm-6 col-md-2 boxli">INC1-CS6</li>
+            <li class="inc1-cs7 p-3 col-12 col-sm-6 col-md-2 boxli">INC1-CS7</li>
+            <li class="inc2-cs8 p-3 col-12 col-sm-6 col-md-2 boxli">INC2-CS8</li>
+            <li class="inc1-cs8 p-3 col-12 col-sm-6 col-md-2 boxli">INC1-CS8</li>
+            <li class="inc2-cs5 p-3 col-12 col-sm-6 col-md-2 boxli">INC2-CS5</li>
+            <li class="inc2-cs6 p-3 col-12 col-sm-6 col-md-2 boxli">INC2-CS6</li>
+            <li class="inc2-cs7 p-3 col-12 col-sm-6 col-md-2 boxli">INC2-CS7</li>
+          </ul> -->
+        </div>
+
+
+        <!-- Section D2 start -->
+        <div class="box-header">
+          <h2 class="box-title"> D2: Command Outage in last 6 hours</h2>
+        </div>
+        <div class="container-Section-D box-row p-0">
+            <ul class="list-style-none text-center d-flex flex-wrap marjus">
+              <li class="p-3 col-12 col-sm-6 col-md-3"><b>
+                  Issues in last 6 hours:</b>
+
+
+                  <!-- Validation for this part is not working -->
+                <textarea class="form-control-1" id="issuesTextAreaD2" rows="4" style="width: 200px" onclick="validation('issuesTextAreaD2', 'popupMessage3')"></textarea></li>
+                <li><div id="popupMessage3"></div></li>
+
+            </ul>
+          </div>
+      </div>
+
+
+      </div>
+
+
+    </div>
+
+
+    <!-- Section E start -->
+
+    <div class="section_name" style="margin:auto">
+      <h2 style="margin-left: 5vw"> Section E: <button type="button" class="plusbutton1" id="+button5"
+          onclick="plusbutton('+button5', 'secEdropdown')">
+          <h1>+</h1>
+        </button> </h2>
+    </div>
+    <div class="hide" id="secEdropdown">
+      <div class="box">
+        <div class="box-header">
+          <h2 class="box-title">E1: IRMS</h2>
+        </div>
+        <ul class="list-style-none text-center d-flex flex-wrap"
+              style="margin:auto; justify-content: center; padding: 5px;">
+        <li class="mar-rt-5 hide1 p-3 col-12 col-sm-6 col-md-3" id="hidden-issues" style="margin: auto;">
+        <div class="box-dropdown-2" id="dropdown_container" style="margin: 10px auto; justify-content: center;">
+                    <div class="box-header ">
+                      <h1 class="box-title">Stations Under Maintenance</h1>
+                    </div>
+                    <div class=" marjus d-flex flex-wrap" style="padding: 10px;">
+
+                      <div class="locationE1">
+                        <label class="loclabelE1 marjus"> Location: </label>
+                        <select id="stationE1" required>
+                          <option value="None">None</option>
+                          <option value="Bengaluru"> Bengaluru</option>
+                          <option value="Delhi"> Delhi</option>
+                          <option value="Lucknow"> Lucknow</option>
+                          <option value="Chennai"> Chennai</option>
+                          <option value="Hassan"> Hassan</option>
+                        </select>
+                      </div>
+                      <div class="confirm-btn" style="margin:0px 10px">
+                        <button class="station-maintenance-btn" id="station-maintenance-btn"
+                          onclick="displayStations('stationE1', 'display-head-E1')">Confirm</button>
+                      </div>
+                    </div>
+                  </div></li>
+
+                  <li class="boxli mar-rt-5 hide1 p-3 col-12 col-sm-6 col-md-3" id="hidden-issues" style="margin: auto;">
+                <h4>Stations under maintenance: </h4>
+                <div id="Station-display">
+                  <div id="display-head-E1">
+                  
+                  </div>
+                  
+                </div>
+                
+
+
+                  </li></ul>
+        
+
+
+        <!-- Section E2 start -->
+        <div class="box-header">
+          <h2 class="box-title">E2: Issues</h2>
+        </div>
+        <div class="container-Section-E box-row p-0">
+            <ul class="list-style-none text-center d-flex flex-wrap marjus">
+              <li class="p-3 col-12 col-sm-6 col-md-3"><b>
+                  Issues in last 6 hours:</b>
+
+
+                  <!-- Validation for this part is not working -->
+                <textarea class="form-control-1" id="issuesTextAreaE2" rows="4" style="width: 200px" onclick="validation('issuesTextAreaE2', 'popupMessage4')"></textarea></li>
+                <li><div id="popupMessage4"></div></li>
+
+            </ul>
+          </div>
+      </div>
+
+
+      </div>
+
+
+    </div>
+
+    <!-- Section F -->
+    <br>
+    <div class="section_name" style="margin:auto">
+      <h2 style="margin-left: 5vw"> Section F: <button type="button" class="plusbutton1" id="+button6"
+          onclick="plusbutton('+button6', 'secFdropdown')">
+          <h1>+</h1>
+        </button> </h2>
+    </div>
+    <div class="hide" id="secFdropdown">
+      <div class="box">
+        <div class="box-header">
+          <h2 class="box-title">F1: IRCDR</h2>
+        </div>
+        <ul class="list-style-none text-center d-flex flex-wrap"
+              style="margin:auto; justify-content: center; padding: 5px;">
+        <li class="mar-rt-5 hide1 p-3 col-12 col-sm-6 col-md-3" id="hidden-issues" style="margin: auto;">
+        <div class="box-dropdown-2" id="dropdown_container" style="margin: 10px auto; justify-content: center;">
+                    <div class="box-header ">
+                      <h1 class="box-title">Stations Under Maintenance</h1>
+                    </div>
+                    <div class=" marjus d-flex flex-wrap" style="padding: 10px;">
+
+                      <div class="locationE1">
+                        <label class="loclabelE1 marjus"> Location: </label>
+                        <select id="stationF1" required>
+                          <option value="None">None</option>
+                          <option value="Bengaluru"> Bengaluru</option>
+                          <option value="Delhi"> Delhi</option>
+                          <option value="Lucknow"> Lucknow</option>
+                          <option value="Chennai"> Chennai</option>
+                          <option value="Hassan"> Hassan</option>
+                        </select>
+                      </div>
+                      <div class="confirm-btn" style="margin:0px 10px">
+                        <button class="station-maintenance-btn" id="station-maintenance-btn"
+                          onclick="displayStations('stationF1', 'display-head-F1')">Confirm</button>
+                      </div>
+                    </div>
+                  </div></li>
+
+                  <li class="boxli mar-rt-5 hide1 p-3 col-12 col-sm-6 col-md-3" id="hidden-issues" style="margin: auto;">
+                <h4>Stations under maintenance: </h4>
+                <div id="Station-display">
+                  <div id="display-head-F1">
+                  
+                  </div>
+                  
+                </div>
+                
+
+
+                  </li></ul>
+        
+
+
+        <!-- Section F2 start -->
+        <div class="box-header">
+          <h2 class="box-title">F2: Issues</h2>
+        </div>
+        <div class="container-Section-E box-row p-0">
+            <ul class="list-style-none text-center d-flex flex-wrap marjus">
+              <li class="p-3 col-12 col-sm-6 col-md-3"><b>
+                  Issues in last 6 hours:</b>
+
+
+                  <!-- Validation for this part is not working -->
+                <textarea class="form-control-1" id="issuesTextAreaF2" rows="4" style="width: 200px" onclick="validation('issuesTextAreaF2', 'popupMessage5')"></textarea></li>
+                <li><div id="popupMessage5"></div></li>
+
+            </ul>
+          </div>
+      </div>
+
+
+      </div>
+
+
+    </div>
+
+    <!-- Section G -->
+    <br>
+    <div class="section_name" style="margin:auto">
+      <h2 style="margin-left: 5vw"> Section G: <button type="button" class="plusbutton1" id="+button7"
+          onclick="plusbutton('+button7', 'secGdropdown')">
+          <h1>+</h1>
+        </button> </h2>
+    </div>
+    <div class="hide" id="secGdropdown">
+      <div class="box">
+        <div class="box-header">
+          <h2 class="box-title">G1: Syslog Status</h2>
+        </div>
+        <div class="container-Section-B box-row p-0">
+            <ul class="list-style-none text-center marjus p-8">
+              <li class="p-3 col-12 col-sm-6 col-md-3 boxli marjus">
+                <legend class="irnwtchainA"><b> Syslog status </b></legend>
+                <input type="radio" id="syslog" name="syslog" value="OK"
+                  onchange="showHideDivRadio('syslog', 'textforsyslog')">
+                <label for="OK">OK</label>
+                <input type="radio" id="syslog" name="syslog" value="NotOK"
+                  onchange="showHideDivRadio('syslog', 'textforsyslog')">
+                <label for="Not OK">Not OK</label>
+
+
+                <div class="hide" id="textforsyslog">
+
+                  <div class="form-group">
+                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="5"
+                      placeholder="Please mention the issue"></textarea>
+                  </div>
+                  <span id="popupMessagesyslog"></span>
+
+                </div>
+              </li>
+
+            </ul>
+          </div>
+
+
+          <div class="box-header">
+            <h2 class="box-title"> G2:</h2>
+          </div>
+          <div class="container-Section-G2 box-row">
+
+          <form id="checkbox-form-2">
+            <div id="section-G2" style="padding: 5px">
+
+            </div>
+          </form>
+
+        </div>
+
+
+        <!-- make hide1 as hide after completing the section -->
+        <div class="hide" id="textforsectionG2">
+          <div class="form-group">
+            <textarea class="form-control" id="textAreaG2" rows="3" cols="50"
+              placeholder="Please mention the issue"></textarea>
+          </div>
+        </div>
+    
+          </div>
+          </div>
+
+
+
+    <!-- Section H -->
+    <br>
+    <div class="section_name" style="margin:auto">
+      <h2 style="margin-left: 5vw"> Section H: <button type="button" class="plusbutton1" id="+button8"
+          onclick="plusbutton('+button8', 'secHdropdown')">
+          <h1>+</h1>
+        </button> </h2>
+    </div>
+    <div class="hide" id="secHdropdown">
+      <div class="box">
+        <div class="box-header">
+          <h2 class="box-title">H1: Look Angle availability</h2>
+        </div>
+                  <div style="display:grid; grid-template-columns:auto auto auto">
+
+                      <ul class="list-style-none text-center marjus p-8">
+                      <span class="location" style="width:80px">
+                        <label class="loclabel"> Location: </label>
+                        <select id="location1" required>
+                          <option value="" disabled selected>Location</option>
+                          <option value="Bengaluru"> Bengaluru</option>
+                          <option value="Delhi"> Delhi</option>
+                          <option value="Lucknow"> Lucknow</option>
+                          <option value="Chennai"> Chennai</option>
+                          <option value="Hassan"> Hassan</option>
+                        </select>
+                      </span>
+                      <span class="DOI" style="width:100px;">
+                        <form action="/action_page.php">
+                          <label for="date">Date:</label>
+                          <input type="date" id="dateH" name="dateH" style="width:115px;">
+                        </form>
+                      </span>  
+                        <span class="time" style="width:80px">
+                        <label class="Htime"> Time: </label>
+                        <input type='text' id="time"> </input>  
+                        </span>
+                      <span class="confirm-btn" style="grid-column: 2/3; margin:10px">
+                        <button class="Terracom_confirm" id="terracom-confirm-btn"
+                          onclick="displaySelectedValue('location1', 'dateH', 'Htime', 'display-fieldH')">Confirm</button>
+                      </span>
+                    </div>
+                  <li class="boxli mar-rt-5 hide1 p-3 col-12 col-sm-6 col-md-3" id="hidden-issues" style="margin: auto;">
+                <b>Issues:</b><br>
+                <div class="hide1" id="display-head1">
+                  <h4>Issues in Terrestrial link</h4>
+                  <div id="display-fieldH"></div>
+                </div></li>
+                </ul>
+
+      </div>
+    </div>
+
+
+
+
+
+
+    <button class="Submitbutton" id="submitbutton">Submit</button>
+
+    </div>
+  </form>
+
+
+  <div class="footer">
+    <p>Footer</p>
+  </div>
+
+  <script src="../js/scripts.js"></script>
+  <script src="../js/jquery.js"></script>
+  <script src="../js/popper.js"></script>
+  <script src="../js/bootstrapbundle.js"></script>
+  <script src="https://requirejs.org/docs/release/2.3.5/minified/require.js"></script>
+</body>
+
+</html>
