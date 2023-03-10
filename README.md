@@ -9,7 +9,7 @@ https://www.codejava.net/frameworks/spring-boot/spring-boot-thymeleaf-form-handl
 
 #### Html file
 
-/*
+
 
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
@@ -124,8 +124,6 @@ public class CustomerService {
 
 }
 
-	*/
-  
  
 
 
